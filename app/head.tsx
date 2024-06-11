@@ -16,7 +16,8 @@ export default function Head() {
 
   return (
     <Navbar classNames={{
-      wrapper: "max-w-[1200px]",
+      base : 'bg-transparent',
+      wrapper: "max-w-[1300px]",
       item: [
         "flex",
         "relative",

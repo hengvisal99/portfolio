@@ -1,27 +1,10 @@
-import { Button } from "@nextui-org/react";
-export default function Home() {
+import Home from "./components/home";
+
+export default function Page() {
   return (
-   <div>
-    <div className="flex flex-wrap gap-4 items-center">
-      <Button color="default">
-        Default
-      </Button>
-      <Button color="primary">
-        Primary
-      </Button>  
-      <Button color="secondary">
-        Secondary
-      </Button>  
-      <Button color="success">
-        Success
-      </Button>  
-      <Button color="warning">
-        Warning
-      </Button>  
-      <Button color="danger">
-        Danger
-      </Button>  
-    </div>
+   <div className="max-w-[1300px] mx-auto px-9">
+      <Home></Home>
+      <Home></Home>
    </div>
   );
 }
