@@ -23,6 +23,7 @@ export default function Head() {
         "relative",
         "h-full",
         "items-center",
+        "text-accent",
         "data-[active=true]:after:content-['']",
         "data-[active=true]:after:absolute",
         "data-[active=true]:after:bottom-0",
@@ -30,7 +31,7 @@ export default function Head() {
         "data-[active=true]:after:right-0",
         "data-[active=true]:after:h-[2px]",
         "data-[active=true]:after:rounded-[2px]",
-        "data-[active=true]:after:bg-primary",
+        "data-[active=true]:after:bg-accent",
       ],
     }} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
@@ -46,7 +47,7 @@ export default function Head() {
 
       <NavbarContent className="hidden sm:flex gap-10" justify="end">
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+          <Link color="success" href="#" aria-current="page">
             Home
           </Link>
         </NavbarItem>
@@ -76,7 +77,7 @@ export default function Head() {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={
-                index === 0 ? "primary" : "foreground"
+                index === 0 ? "success" : "foreground"
               }
               className="w-full"
               href="#"
