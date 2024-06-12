@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 const Photo = () => {
     return (
         
-        <motion.div className='relative flex justify-center w-full h-full border border-blue-500'>
+        <motion.div className='relative flex justify-center w-full h-full'>
             <motion.div 
-                className="absolute order:1 lg:order-none w-[300px] h-[300px] lg:w-[550px] lg:h-[500px] max-w-full max-h-full flex items-center justify-center"
+                className="absolute order:1 lg:order-none w-[300px] h-[300px] lg:w-[470px] lg:h-[475px] 
+                max-w-full  flex items-center justify-center"
                 initial={{ opacity: 0 }}
                 animate={{
                     opacity: 1,
@@ -19,12 +20,14 @@ const Photo = () => {
                     className="rounded-bl-full rounded-br-full"
                     src="/profile.png"
                     priority
-                    quality={100}
                     fill
+                    quality={100}
+                    // height={400}
+                    // width={600}
                     alt=""
                 />
             </motion.div>
-            <motion.svg className="lg-w[506px] h-[350px] lg:h-[540px] mx-auto"
+            <motion.svg className="lg-w[530px] h-[320px] lg:h-[515px] mx-auto"
                 fill="transparent"
                 viewBox="0 0 506 506"
                 xmlns="http://www.w3.org/2000/svg"
