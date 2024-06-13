@@ -1,6 +1,6 @@
 import { Button } from "@nextui-org/react"
 import { IoIosArrowForward } from "react-icons/io";
-import Photo from "./photo";
+import HomePhoto from "./HomePhoto";
 
 const Home = () => {
     return (
@@ -14,7 +14,7 @@ const Home = () => {
                 </Button>
             </div>
             <div className="order-1 lg:order-none my-8 lg:my-0">
-                <Photo></Photo>
+                <HomePhoto/>
             </div>
         </div>
 

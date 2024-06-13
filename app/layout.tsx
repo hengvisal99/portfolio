@@ -3,7 +3,8 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
 import { ReactNode } from "react";
-import Head from "./head";
+
+import Header from "./components/Header";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -23,9 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetbrainsMono.variable}  h-svh overflow-x-hidden`}>
+      <body className={`${jetbrainsMono.variable} overflow-x-hidden`}>
         <Providers>
-          <Head></Head>
+          <Header/>
           <main>
             {children}
           </main>

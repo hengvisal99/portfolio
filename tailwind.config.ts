@@ -1,4 +1,6 @@
-import { colors } from "@nextui-org/react";
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 import type { Config } from "tailwindcss";
 const { nextui } = require("@nextui-org/react");
 const config: Config = {
@@ -28,6 +30,7 @@ const config: Config = {
 
   darkMode: "class",
   plugins: [
+    addVariablesForColors,
     nextui({
       themes: {
         dark: {
@@ -43,4 +46,14 @@ const config: Config = {
     }),
   ],
 };
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
+}
 export default config;

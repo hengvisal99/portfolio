@@ -1,13 +1,12 @@
 "use client";
-import React from 'react'
 import Image from 'next/image'
 import { motion } from "framer-motion";
-const Photo = () => {
+const HomePhoto = () => {
     return (
         
         <motion.div className='relative flex justify-center w-full h-full'>
             <motion.div 
-                className="absolute order:1 lg:order-none w-[300px] h-[300px] lg:w-[470px] lg:h-[475px] 
+                className="absolute order:1 lg:order-none w-[300px] h-[300px] lg:w-[490px] lg:h-[475px] 
                 max-w-full  flex items-center justify-center"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -22,8 +21,6 @@ const Photo = () => {
                     priority
                     fill
                     quality={100}
-                    // height={400}
-                    // width={600}
                     alt=""
                 />
             </motion.div>
@@ -53,12 +50,7 @@ const Photo = () => {
                     />   
             </motion.svg>
         </motion.div>
-
-
-    
-
-
     )
 }
 
-export default Photo
+export default HomePhoto

@@ -1,9 +1,9 @@
 "use client";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
 import { useState } from "react";
-import { Logo } from "./Logo";
+import { Logo } from "./ui/Logo";
 
-export default function Head() {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
