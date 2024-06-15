@@ -2,15 +2,14 @@
 import { Button } from '@nextui-org/react';
 import Image from 'next/image'
 import { IoIosArrowForward } from 'react-icons/io';
-import { ButtonMovingBorder } from './ui/moving-border';
+import { ButtonMovingBorder } from '../utils/moving-border';
 const About = () => {
     return (
-        <div className='border'>
-            
-            <h2 className='text-center text-accent'>ABOUT ME</h2>
+        <div className='mb-10'>
+            <h2 className='text-center text-accent mb-4'>ABOUT ME</h2>
 
-            <div className='grid grid-col-1 lg:grid-cols-2 border'>
-                <ButtonMovingBorder
+            <div className='grid grid-col-1 lg:grid-cols-2'>
+                {/* <ButtonMovingBorder
                     borderRadius="1.75rem"
                     className="bg-transparent border-slate-800"
                 >
@@ -19,9 +18,13 @@ const About = () => {
                             className="rounded-bl-full rounded-br-full w-[460px]"
                         />
                     </div>
-                </ButtonMovingBorder>
-
-                <div className='border border-red-500 flex flex-col gap-4 place-items-start'>
+                </ButtonMovingBorder> */}
+                <div className='mx-auto hidden lg:block'>
+                        <img src="profile.png"
+                            className="rounded-bl-full rounded-br-full w-[460px]"
+                        />
+                    </div>
+                <div className='flex flex-col gap-4 place-items-start'>
                     <h2>2 Years Experience</h2>
                     <p className='text-[#BFBECB]'>
                         As a front-end seveloper.
@@ -32,7 +35,6 @@ const About = () => {
                     </Button>
                 </div>
             </div>
-
         </div>
     )
 }
