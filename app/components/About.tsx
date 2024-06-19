@@ -5,8 +5,8 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { ButtonMovingBorder } from '../utils/moving-border';
 const About = () => {
     return (
-        <div className='mb-10'>
-            <h2 className='text-center text-accent mb-6'>ABOUT ME</h2>
+        <div className='mb-9'>
+            <h2 className='text-center text-accent mb-9'>ABOUT ME</h2>
 
             <div className='grid grid-col-1 lg:grid-cols-2'>
                 {/* <ButtonMovingBorder

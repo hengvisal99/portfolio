@@ -6,8 +6,8 @@ const HomePhoto = () => {
         
         <motion.div className='relative flex justify-center w-full h-full'>
             <motion.div 
-                className="absolute order:1 lg:order-none w-[300px] h-[300px] lg:w-[490px] lg:h-[475px] 
-                max-w-full  flex items-center justify-center"
+                className="absolute order:1 lg:order-none w-[290px] h-[290px] lg:w-[450px] lg:h-[450px] 
+                flex items-center justify-center"
                 initial={{ opacity: 0 }}
                 animate={{
                     opacity: 1,
@@ -24,7 +24,7 @@ const HomePhoto = () => {
                     alt=""
                 />
             </motion.div>
-            <motion.svg className="lg-w[530px] h-[320px] lg:h-[515px] mx-auto"
+            <motion.svg className="h-[320px] lg:h-[505px] mx-auto"
                 fill="transparent"
                 viewBox="0 0 506 506"
                 xmlns="http://www.w3.org/2000/svg"

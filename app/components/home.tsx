@@ -4,16 +4,16 @@ import HomePhoto from "./HomePhoto";
 
 const Home = () => {
     return (
-        <div className="grid place-content-center grid-cols-1 lg:grid-cols-2 h-[91svh]">
-            <div className="flex gap-4 flex-col my-auto order-2 lg:order-none place-items-center lg:place-items-start">
+        <div className="grid lg:gap-x-3 place-content-center grid-cols-1 lg:grid-cols-2 h-[91svh]">
+            <div className="flex gap-5 flex-col my-auto order-2 lg:order-none place-items-center lg:place-items-start">
                 <h1>Hello ,</h1>
                 <h1 className="text-accent">I'm Heng Visal</h1>
-                <h3 className="text-3xl">FRONT-END DEVELOPER</h3>
+                <h2 className="text-[25px]">FRONT-END DEVELOPER</h2>
                 <Button color="success" className="text-lg font-semibold w-[145px] h-[50px]" endContent={<IoIosArrowForward />} variant="bordered">
                     success
                 </Button>
             </div>
-            <div className="order-1 lg:order-none my-8 lg:my-0">
+            <div className="order-1 lg:order-none mb-8 lg:my-0">
                 <HomePhoto/>
             </div>
         </div>
