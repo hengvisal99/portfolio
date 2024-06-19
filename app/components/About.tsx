@@ -25,7 +25,7 @@ const About = () => {
                         />
                     </div>
                 <div className='flex flex-col gap-4 place-items-start'>
-                    <h2>2 Years Experience</h2>
+                    <h2 className='text-[28px]'>2 Years Experience</h2>
                     <p className='text-[#BFBECB]'>
                         As a front-end seveloper.
                         I have successfully designed the user interface and worked closely with the backend team to integrate Apis.My role has involved resolving technical issues, optimizing application performance and exploring new technologies to ensure enhanced front-end development.I have consistently maintained coding standards for code reviews, team support and managing multiple tasks assigned by project managers.
