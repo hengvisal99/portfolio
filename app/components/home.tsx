@@ -8,7 +8,7 @@ const Home = () => {
             <div className="flex gap-5 flex-col my-auto order-2 lg:order-none place-items-center lg:place-items-start">
                 <h1>Hello ,</h1>
                 <h1 className="text-accent">I'm Heng Visal</h1>
-                <h2 className="text-[25px]">FRONT-END DEVELOPER</h2>
+                <h2 className="text-[23px] sm:text-[25px]">FRONT-END DEVELOPER</h2>
                 <Button color="success" className="text-lg font-semibold w-[145px] h-[50px]" endContent={<IoIosArrowForward />} variant="bordered">
                     success
                 </Button>

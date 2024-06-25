@@ -1,6 +1,6 @@
 import About from "./components/About";
+import Portfolio from "./components/Portfolio";
 import Resume from "./components/Resume";
-
 import Skills from "./components/Skills";
 import Home from "./components/home";
 
@@ -13,6 +13,7 @@ export default function Page() {
       <About/>
       <Skills/>
       <Resume/>
+      <Portfolio/>
    </div>
   );
 }
