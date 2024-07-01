@@ -12,7 +12,7 @@ function Portfolio() {
       ],
     },
     {
-      image: "https://nextui.org/images/hero-card-complete.jpeg",
+      image: "/moc.png",
       title: "Frontend Radio",
       icon: "12 Tracks",
       skills: [
