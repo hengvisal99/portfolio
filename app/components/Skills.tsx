@@ -19,7 +19,6 @@ const Skills = () => {
     { icon: "logos/framer-motion.svg", tooltip: "Framer Motion" },
     { icon: "/logos/next-auth.png", tooltip: "Next-auth" },
     { icon: "logos/zod.svg", tooltip: "Zod" },
-
     { icon: "/logos/vuex.png", tooltip: "Vuex" },
     { icon: "logos/supabase.svg", tooltip: "Supabase" },
     { icon: "/logos/dexie.png", tooltip: "DexieJs" },

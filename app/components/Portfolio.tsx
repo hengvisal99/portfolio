@@ -5,17 +5,38 @@ function Portfolio() {
     {
       image: "https://nextui.org/images/hero-card-complete.jpeg",
       title: "Frontend Radio",
-      icon: "12 Tracks",
+      skills: [
+        { icon: "logos/angular.svg", tooltip: "Angular" },
+        { icon: "logos/bootstrap.svg", tooltip: "Bootstrap" },
+        { icon: "logos/angular-material.svg", tooltip: "Angular Material" },
+      ],
     },
     {
       image: "https://nextui.org/images/hero-card-complete.jpeg",
       title: "Frontend Radio",
       icon: "12 Tracks",
+      skills: [
+        { icon: "logos/angular.svg", tooltip: "Angular" },
+        { icon: "logos/bootstrap.svg", tooltip: "Bootstrap" },
+        { icon: "logos/angular-material.svg", tooltip: "Angular Material" },
+        { icon: "logos/ngrx.svg", tooltip: "NgRx" },
+      ],
     },
     {
       image: "https://nextui.org/images/hero-card-complete.jpeg",
       title: "Frontend Radio",
       icon: "12 Tracks",
+      skills: [
+        { icon: "logos/react.svg", tooltip: "React" },
+        { icon: "/logos/nextjs.svg", tooltip: "NextJs" },
+        { icon: "logos/tailwind.svg", tooltip: "Tailwind" },
+        { icon: "logos/material-ui.svg", tooltip: "Material UI" },
+        { icon: "logos/react-query.svg", tooltip: "React Query" },
+        { icon: "/logos/react-hook-form.png", tooltip: "React Hook Form" },
+        { icon: "/logos/next-auth.png", tooltip: "Next-auth" },
+        { icon: "logos/zod.svg", tooltip: "Zod" },
+        { icon: "/logos/dexie.png", tooltip: "DexieJs" },
+      ],
     },
   ];
   return (
@@ -27,7 +48,7 @@ function Portfolio() {
             key={index}
             image={item.image}
             title={item.title}
-            icon={item.icon}
+            skills={item.skills}
           />
         ))}
       </div>
