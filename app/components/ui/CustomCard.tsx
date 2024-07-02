@@ -31,9 +31,9 @@ const CustomCard = ({ image, title, skills }: CustomCardProps) => {
             <h4 className="font-bold text-large text-accent">{title}</h4>
             <GoArrowUpRight className="size-[25px] cursor-pointer duration-300 transition group-hover:scale-150"/>
           </div>
-          <div className="grid gap-x-2 gap-y-3 grid-cols-5 lg:grid-cols-5 w-full">
+          <div className="grid mb-1 gap-x-2 gap-y-3 grid-cols-5 lg:grid-cols-5 w-full">
             {skills.map((skill, index) => (
-                <Tooltip content={skill.tooltip}>
+                <Tooltip content={skill.tooltip} key={index}>
                   <div className="flex justify-center items-center ">
                     <Image
                       src={skill.icon}

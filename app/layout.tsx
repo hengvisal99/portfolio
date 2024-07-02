@@ -5,6 +5,7 @@ import Providers from "./providers";
 import { ReactNode } from "react";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -30,7 +31,7 @@ export default function RootLayout({
           <main>
             {children}
           </main>
-
+          <Footer/>
         </Providers>
       </body>
     </html>
