@@ -8,9 +8,9 @@ const ScrollTopButton = () => {
     const handleScroll = () => {
       window.scrollY > 20 ? setVisible(true) : setVisible(false);
     };
-
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
- 
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
