@@ -1,8 +1,6 @@
 "use client";
 import { Button } from '@nextui-org/react';
-import Image from 'next/image'
 import { IoIosArrowForward } from 'react-icons/io';
-import { ButtonMovingBorder } from '../utils/moving-border';
 const About = () => {
     return (
         <div className='mb-16'>

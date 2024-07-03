@@ -31,7 +31,7 @@ const Resume = () => {
   const experience = [
     {
       date: "Mar/2022 - Present",
-      position: "Front-end Developer",
+      position: "Frontend Developer",
       companyName: "Intech Dev",
       job: `Create design UI, develop reusable UI components, 
             collaborate with the backend and work on the API. 
@@ -43,7 +43,7 @@ const Resume = () => {
     },
     {
       date: "Dec/2021 - Feb/2022",
-      position: "Front-end Developer",
+      position: "Frontend Developer",
       companyName: "Haha",
       job: `Create UI, ensure that all user input is validated before submitting to the back-end.`,
     },

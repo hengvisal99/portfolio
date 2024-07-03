@@ -10,7 +10,7 @@ const Footer = () => {
     ]
     return (
         <div className='border-t border-gray-600'>
-            <div className='px-9 xl:px-36 py-4 flex items-center justify-between w-full'>
+            <div className='mx-auto max-w-[1300px] pl-10 pr-6 py-4 flex flex-col  md:flex-row items-center justify-between w-full'>
                 <p>
                     Copyright © 2024 VisalFolio
                 </p>

@@ -6,11 +6,11 @@ import { ReactNode } from "react";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-
+import { NextUIProvider } from "@nextui-org/react";
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-jetbrainsMono"
+  variable: "--font-jetbrainsMono",
 });
 
 export const metadata: Metadata = {
@@ -26,13 +26,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jetbrainsMono.variable} overflow-x-hidden`}>
-        <Providers>
-          <Header/>
-          <main>
-            {children}
-          </main>
-          <Footer/>
-        </Providers>
+        <NextUIProvider className="dark">
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </NextUIProvider>
+        {/* <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers> */}
       </body>
     </html>
   );
