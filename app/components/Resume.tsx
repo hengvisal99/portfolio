@@ -50,7 +50,7 @@ const Resume = () => {
   ];
 
   return (
-    <div className="my-16">
+    <div className="my-16" id="Resume">
       <h2 className="text-center text-accent mb-16">RESUME</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="flex flex-col gap-4 mb-6 lg:mb-0">

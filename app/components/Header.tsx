@@ -1,43 +1,65 @@
 "use client";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button } from "@nextui-org/react";
-import { useState } from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
+  Link,
+} from "@nextui-org/react";
+import { useEffect, useState } from "react";
 import { Logo } from "../utils/Logo";
-
 export default function Header() {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [activeIndex, setActiveIndex] = useState(0);
   const menuItems = [
-    "Home",
-    "About",
-    "Skills",
-    "Resume",
-    "Portfolio"
+    { name: "Home", color: "foreground", href: "#" },
+    { name: "About", color: "foreground", href: "#About" },
+    { name: "Skills", color: "foreground", href: "#Skills" },
+    { name: "Resume", color: "foreground", href: "#Resume" },
+    { name: "Portfolio", color: "foreground", href: "#Portfolio" },
   ];
-
+  const handleMenuItemClick = (index : number) => {
+    setActiveIndex(index);
+    setIsMenuOpen(false);
+  };
+  useEffect(() => {
+    const hash = window.location.hash;
+    const index = menuItems.findIndex(item => item.href === hash);
+    setActiveIndex(index !== -1 ? index : 0);
+  }, []);
   return (
-    <Navbar classNames={{
-      base : 'bg-transparent',
-      wrapper: "max-w-[1300px]",
-      item: [
-        "flex",
-        "relative",
-        "h-full",
-        "items-center",
-        "text-accent",
-        "data-[active=true]:after:content-['']",
-        "data-[active=true]:after:absolute",
-        "data-[active=true]:after:bottom-0",
-        "data-[active=true]:after:left-0",
-        "data-[active=true]:after:right-0",
-        "data-[active=true]:after:h-[2px]",
-        "data-[active=true]:after:rounded-[2px]",
-        "data-[active=true]:after:bg-accent",
-      ],
-    }} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar
+      classNames={{
+        base: "bg-transparent",
+        wrapper: "max-w-[1300px]",
+        item: [
+          "flex",
+          "relative",
+          "h-full",
+          "items-center",
+          "text-accent",
+          "data-[active=true]:after:content-['']",
+          "data-[active=true]:after:absolute",
+          "data-[active=true]:after:bottom-0",
+          "data-[active=true]:after:left-0",
+          "data-[active=true]:after:right-0",
+          "data-[active=true]:after:h-[2px]",
+          "data-[active=true]:after:rounded-[2px]",
+          "data-[active=true]:after:bg-accent",
+        ],
+      }}
+
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent>
         <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
+          aria-label={isMenuOpen ? "Open menu" : "Close menu"}
+          className="md:hidden"
         />
         <NavbarBrand>
           <Logo></Logo>
@@ -45,45 +67,31 @@ export default function Header() {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-10" justify="end">
-        <NavbarItem isActive>
-          <Link color="success" href="#" aria-current="page">
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            About
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Skills
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Resume
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Portfolio
-          </Link>
-        </NavbarItem>
+      <NavbarContent className="hidden md:flex gap-10" justify="end">
+        {menuItems.map((item, index) => (
+          <NavbarItem key={index} isActive={index === activeIndex}>
+            <Link
+              color={index === activeIndex ? "success" : "foreground"}
+              href={item.href}
+              onClick={() => setActiveIndex(index)}
+            >
+              {item.name}
+              
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={
-                index === 0 ? "success" : "foreground"
-              }
+              color={index === activeIndex ? "success" : "foreground"}
               className="w-full"
-              href="#"
+              href={item.href}
               size="lg"
+              onClick={() => handleMenuItemClick(index)}
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}

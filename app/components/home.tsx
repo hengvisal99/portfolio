@@ -4,7 +4,7 @@ import HomePhoto from "./HomePhoto";
 
 const Home = () => {
     return (
-        <div className="grid lg:gap-x-3 place-content-center grid-cols-1 lg:grid-cols-2 h-[94svh]">
+        <div id="Home" className="grid lg:gap-x-3 place-content-center grid-cols-1 lg:grid-cols-2 h-[94svh]">
             <div className="flex gap-5 flex-col my-auto order-2 lg:order-none place-items-center lg:place-items-start">
                 <h1>Hello ,</h1>
                 <h1 className="text-accent">I'm Heng Visal</h1>

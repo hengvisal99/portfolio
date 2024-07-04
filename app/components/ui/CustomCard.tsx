@@ -33,7 +33,7 @@ const CustomCard = ({ image, title, skills }: CustomCardProps) => {
           </div>
           <div className="grid mb-1 gap-x-2 gap-y-3 grid-cols-5 lg:grid-cols-5 w-full">
             {skills.map((skill, index) => (
-                <Tooltip content={skill.tooltip} key={index}>
+                <Tooltip content={skill.tooltip} key={index} color="danger">
                   <div className="flex justify-center items-center ">
                     <Image
                       src={skill.icon}

@@ -26,16 +26,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jetbrainsMono.variable} overflow-x-hidden`}>
-        <NextUIProvider className="dark">
+        {/* <NextUIProvider className="dark">
           <Header />
           <main>{children}</main>
           <Footer />
-        </NextUIProvider>
-        {/* <Providers>
+        </NextUIProvider> */}
+        <Providers>
           <Header />
           <main>{children}</main>
           <Footer />
-        </Providers> */}
+        </Providers>
       </body>
     </html>
   );
