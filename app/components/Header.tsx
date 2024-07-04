@@ -11,8 +11,9 @@ import {
 } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import { Logo } from "../utils/Logo";
+import { useRouter } from "next/navigation";
 export default function Header() {
-
+  const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const menuItems = [
@@ -30,6 +31,7 @@ export default function Header() {
     const hash = window.location.hash;
     const index = menuItems.findIndex(item => item.href === hash);
     setActiveIndex(index !== -1 ? index : 0);
+    router.push(hash)
   }, []);
   return (
     <Navbar

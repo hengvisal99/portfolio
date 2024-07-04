@@ -24,7 +24,7 @@ const About = () => {
           alt=""
           src="profile-2.webp"
         />
-        <div className="flex flex-col gap-4 place-items-start">
+        <div className="flex flex-col gap-4 place-items-start justify-center">
           <h2 className="text-[28px]">2 Years Experience</h2>
           <p className="text-[#BFBECB]">
             As a front-end seveloper. I have successfully designed the user
