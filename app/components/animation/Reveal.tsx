@@ -1,6 +1,6 @@
 "use client";
 import { motion, useAnimation, useInView } from "framer-motion";
-import React, { ReactNode, useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 interface props {
   children: ReactNode;
   width?: "fit-content" | "100%";

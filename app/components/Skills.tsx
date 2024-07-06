@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { Tooltip } from "@nextui-org/react";
+import Reveal from "./animation/Reveal";
+import ScaleCenter from "./animation/ScaleCenter";
 
 const Skills = () => {
   const skills = [
@@ -28,26 +30,35 @@ const Skills = () => {
 
   return (
     <div id="Skills">
-      <h2 className="text-center text-accent mb-16">Skills</h2>
+      <div className="grid place-content-center  mb-8">
+        <Reveal>
+          <h2 className="text-accent mb-8">Skills</h2>
+        </Reveal>
+      </div>
       <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-10 lg:grid-cols-10 gap-x-4 lg:gap-x-4 gap-y-4 lg:gap-y-6">
         {skills.map((skill, index) => (
-          <div
+         
+         <div
             key={index}
             className="flex justify-center items-center border-2 border-[#ffffff1a] rounded-xl lg:rounded-2xl overflow-hidden p-2"
           >
-            <Tooltip content={skill.tooltip} color="danger"  offset={15}>
-              <div className="flex justify-center items-center ">
-                <Image
-                  src={skill.icon}
-                  alt={skill.tooltip}
-                  width={100}
-                  height={100}
-                />
-              </div>
-            </Tooltip>
+             <ScaleCenter>
+              <Tooltip content={skill.tooltip} color="danger" offset={15}>
+                <div className="flex justify-center items-center ">
+                  <Image
+                    src={skill.icon}
+                    alt={skill.tooltip}
+                    width={100}
+                    height={100}
+                  />
+                </div>
+              </Tooltip>
+             </ScaleCenter>
           </div>
+
         ))}
       </div>
+
     </div>
   );
 };
