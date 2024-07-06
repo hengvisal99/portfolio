@@ -35,7 +35,9 @@ const config: Config = {
       '2xl': '1536px', // 2X large screens and up
     },
   },
-
+  variants: {
+    fill: ['hover', 'focus'], // this line does the trick
+  },
   darkMode: "class",
   plugins: [
     addVariablesForColors,

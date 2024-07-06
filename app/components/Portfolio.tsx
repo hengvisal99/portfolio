@@ -3,8 +3,8 @@ import CustomCard from "./ui/CustomCard";
 function Portfolio() {
   const card = [
     {
-      image: "/mef.webp",
-      // image: "https://nextui.org/images/hero-card-complete.jpeg",
+      // image: "/mef.webp",
+      image: "https://nextui.org/images/hero-card-complete.jpeg",
       title: "Frontend Radio",
       skills: [
         { icon: "logos/angular.svg", tooltip: "Angular" },
@@ -13,8 +13,8 @@ function Portfolio() {
       ],
     },
     {
-      image: "/moc.webp",
-      // image: "https://nextui.org/images/hero-card-complete.jpeg",
+      // image: "/moc.webp",
+      image: "https://nextui.org/images/hero-card-complete.jpeg",
       title: "Frontend Radio",
       icon: "12 Tracks",
       skills: [
@@ -25,8 +25,8 @@ function Portfolio() {
       ],
     },
     {
-      image: "/portal.webp",
-      // image: "https://nextui.org/images/hero-card-complete.jpeg",
+      // image: "/portal.webp",
+      image: "https://nextui.org/images/hero-card-complete.jpeg",
       title: "Frontend Radio",
       icon: "12 Tracks",
       skills: [
@@ -42,8 +42,8 @@ function Portfolio() {
       ],
     },
     {
-      image: "/portfolio.webp",
-      // image: "https://nextui.org/images/hero-card-complete.jpeg",
+      // image: "/portfolio.webp",
+      image: "https://nextui.org/images/hero-card-complete.jpeg",
       title: "Frontend Radio",
       icon: "12 Tracks",
       skills: [
