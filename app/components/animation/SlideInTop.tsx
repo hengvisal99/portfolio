@@ -1,17 +1,20 @@
-
-
+// components/SlideInTop.js
 "use client";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { ReactNode, useEffect, useRef } from "react";
-interface props {
+
+interface Props {
   children: ReactNode;
+  delay: number;
   width?: "fit-content" | "100%";
 }
-const ScaleCenter = ({ children , width = "fit-content"} : props) => {
+
+const SlideInTop = ({ children, delay, width = "fit-content" }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
   const slideControls = useAnimation();
+
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
@@ -21,19 +24,19 @@ const ScaleCenter = ({ children , width = "fit-content"} : props) => {
 
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
-    <motion.div
-      variants={{
-        hidden: { x: -100, opacity: 0 },
-        visible:{ x: 1, opacity: 1 },
-      }}
-      initial="hidden"
-      animate={mainControls}
-      transition={{ duration: 0.5, delay: 0.3 , ease: "easeIn"  }}
-    >
-      {children}
-    </motion.div> 
-  </div>
+      <motion.div
+        variants={{
+          hidden: { y: -1000, opacity: 0 },
+          visible: { y: 0, opacity: 1 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.7, delay, ease: "easeOut" }}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 };
 
-export default ScaleCenter;
+export default SlideInTop;

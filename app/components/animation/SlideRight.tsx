@@ -4,8 +4,9 @@ import { ReactNode, useEffect, useRef } from "react";
 interface props {
   children: ReactNode;
   width?: "fit-content" | "100%";
+  delay?: number;
 }
-const SlideRight = ({ children , width = "fit-content"} : props) => {
+const SlideRight = ({ children, delay = 0 , width = "fit-content"} : props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -38,7 +39,7 @@ const SlideRight = ({ children , width = "fit-content"} : props) => {
       }}
       initial="hidden"
       animate={slideControls}
-      transition={{ duration: 0.5, ease: "easeIn" }}
+      transition={{ duration: 0.5,delay, ease: "easeIn" }}
        className="absolute top-1 bottom-1 left-0 right-0 bg-accent z-20"
     >
     </motion.div>

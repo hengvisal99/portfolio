@@ -25,11 +25,11 @@ const About = () => {
         </SlideRight>
 
         <div className="flex flex-col gap-4 place-items-start justify-center">
-          <SlideLeft>
+          <SlideLeft  delay={0.2}>
             <h2 className="text-[28px]">2 Years Experience</h2>
 
           </SlideLeft>
-          <SlideLeft>
+          <SlideLeft  delay={0.4}>
             <p className="text-[#BFBECB]">
               As a front-end seveloper. I have successfully designed the user
               interface and worked closely with the backend team to integrate
@@ -40,7 +40,7 @@ const About = () => {
               assigned by project managers.
             </p>
           </SlideLeft>
-          <SlideLeft>
+          <SlideLeft  delay={0.6}>
             <Button
               color="success"
               className="text-lg font-semibold w-[145px] h-[50px]"

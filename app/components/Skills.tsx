@@ -2,7 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { Tooltip } from "@nextui-org/react";
 import Reveal from "./animation/Reveal";
-import ScaleCenter from "./animation/ScaleCenter";
+import ScaleCenter from "./animation/SlideInTop";
+import SlideInTop from "./animation/SlideInTop";
 
 const Skills = () => {
   const skills = [
@@ -42,7 +43,7 @@ const Skills = () => {
             key={index}
             className="flex justify-center items-center border-2 border-[#ffffff1a] rounded-xl lg:rounded-2xl overflow-hidden p-2"
           >
-             <ScaleCenter>
+             <SlideInTop delay={index * 0.1}>
               <Tooltip content={skill.tooltip} color="danger" offset={15}>
                 <div className="flex justify-center items-center ">
                   <Image
@@ -53,7 +54,7 @@ const Skills = () => {
                   />
                 </div>
               </Tooltip>
-             </ScaleCenter>
+             </SlideInTop >
           </div>
 
         ))}
