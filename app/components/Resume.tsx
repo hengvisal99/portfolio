@@ -53,7 +53,6 @@ const Resume = () => {
 
   return (
     <div className="my-16" id="Resume">
-
       <div className="grid place-content-center  mb-8">
         <Reveal>
           <h2 className="text-center text-accent mb-8">RESUME</h2>
@@ -65,33 +64,33 @@ const Resume = () => {
             <SlideRight>
               <Image src="/edu.svg" alt={""} width={40} height={40} />
             </SlideRight>
-            <SlideRight>
-              Education
-            </SlideRight>
+            <SlideRight>Education</SlideRight>
           </h2>
           <ol className="relative border-l border-gray-700">
             {education.map((item, index) => (
               <li
                 key={index}
-                className={`ml-7 ${index !== education.length - 1 ? "mb-8" : ""
-                  }`}
+                className={`ml-7 ${
+                  index !== education.length - 1 ? "mb-8" : ""
+                }`}
               >
                 <div className="absolute w-3 h-3 rounded-full  -left-1.5 border border-gray-900 bg-gray-700"></div>
-                <SlideRight delay={index * 0.1}>
+                <SlideRight>
                   <p className="mb-5 text-lg font-normal leading-none text-gray-400">
                     {item.date}
                   </p>
                 </SlideRight>
 
-                <SlideRight delay={index * 0.2}>
-                  <h1 className="text-accent text-[25px] md:text-[30px]  mb-2">{item.course}</h1>
+                <SlideRight>
+                  <h1 className="text-accent text-[25px] md:text-[30px]  mb-2">
+                    {item.course}
+                  </h1>
                 </SlideRight>
-                <SlideRight delay={index * 0.3}>
+                <SlideRight>
                   <h3 className="text-lg font-semibold text-white">
                     {item.school}
                   </h3>
                 </SlideRight>
-
               </li>
             ))}
           </ol>
@@ -99,27 +98,42 @@ const Resume = () => {
 
         <div className="flex flex-col gap-4">
           <h2 className="text-4xl flex gap-5 items-center mb-6 -ml-[19px]">
-            <Image src="/work.svg" alt={""} width={40} height={40} />
-            Experience
+            <SlideRight>
+              <Image src="/work.svg" alt={""} width={40} height={40} />
+            </SlideRight>
+            <SlideRight>Experience</SlideRight>
           </h2>
           <ol className="relative border-l border-gray-200 dark:border-gray-700">
             {experience.map((item, index) => (
               <li
                 key={index}
-                className={`ml-7 ${index !== experience.length - 1 ? "mb-8" : ""
-                  }`}
+                className={`ml-7 ${
+                  index !== experience.length - 1 ? "mb-8" : ""
+                }`}
               >
                 <div className="absolute w-3 h-3 rounded-full  -left-1.5 border border-gray-900 bg-gray-700"></div>
-                <p className="mb-4 text-lg font-normal leading-none text-gray-400">
-                  {item.date}
-                </p>
-                <h1 className="text-accent text-[25px] md:text-[30px]  mb-2">
-                  {item.position}
-                </h1>
-                <h3 className="text-lg font-semibold text-white mb-3">
-                  {item.companyName}
-                </h3>
-                <p className="text-[#BFBECB] leading-[1.9rem] lg:leading-[1.72rem]">{item.job}</p>
+                <SlideRight>
+                  <p className="mb-4 text-lg font-normal leading-none text-gray-400">
+                    {item.date}
+                  </p>
+                </SlideRight>
+
+                <SlideRight>
+                  <h1 className="text-accent text-[25px] md:text-[30px]  mb-2">
+                    {item.position}
+                  </h1>
+                </SlideRight>
+
+                <SlideRight>
+                  <h3 className="text-lg font-semibold text-white mb-3">
+                    {item.companyName}
+                  </h3>
+                </SlideRight>
+                <SlideRight>
+                  <p className="text-[#BFBECB] leading-[1.9rem] lg:leading-[1.72rem]">
+                    {item.job}
+                  </p>
+                </SlideRight>
               </li>
             ))}
           </ol>

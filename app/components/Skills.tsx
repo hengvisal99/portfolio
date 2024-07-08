@@ -43,7 +43,7 @@ const Skills = () => {
             key={index}
             className="flex justify-center items-center border-2 border-[#ffffff1a] rounded-xl lg:rounded-2xl overflow-hidden p-2"
           >
-             <SlideInTop delay={index * 0.1}>
+             <SlideInTop delay={index * 0.03}>
               <Tooltip content={skill.tooltip} color="danger" offset={15}>
                 <div className="flex justify-center items-center ">
                   <Image

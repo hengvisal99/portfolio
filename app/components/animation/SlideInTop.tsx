@@ -5,7 +5,7 @@ import { ReactNode, useEffect, useRef } from "react";
 
 interface Props {
   children: ReactNode;
-  delay: number;
+  delay?: number;
   width?: "fit-content" | "100%";
 }
 
@@ -16,6 +16,7 @@ const SlideInTop = ({ children, delay, width = "fit-content" }: Props) => {
   const slideControls = useAnimation();
 
   useEffect(() => {
+    console.log('isInView',isInView)
     if (isInView) {
       mainControls.start("visible");
       slideControls.start("visible");
@@ -31,7 +32,7 @@ const SlideInTop = ({ children, delay, width = "fit-content" }: Props) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.7, delay, ease: "easeOut" }}
+        transition={{ duration: 1, delay, ease: "easeOut" }}
       >
         {children}
       </motion.div>

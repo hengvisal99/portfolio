@@ -27,7 +27,7 @@ const SlideRight = ({ children, delay = 0 , width = "fit-content"} : props) => {
       }}
       initial="hidden"
       animate={mainControls}
-      transition={{ duration: 0.5, delay: 0.3 , ease: "easeIn"  }}
+      transition={{ duration: 0.5, delay: 0.75 , ease: "easeIn"  }}
     >
       {children}
     </motion.div> 

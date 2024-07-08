@@ -1,3 +1,4 @@
+import Reveal from "./animation/Reveal";
 import CustomCard from "./ui/CustomCard";
 
 function Portfolio() {
@@ -57,11 +58,16 @@ function Portfolio() {
   ];
   return (
     <div id="Portfolio">
-      <h2 className="text-center text-accent mb-16">PORTFOLIO</h2>
+      <div className="grid place-content-center  mb-8">
+        <Reveal>
+          <h2 className="text-center text-accent mb-8">PORTFOLIO</h2>
+        </Reveal>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
         {card.map((item, index) => (
           <CustomCard
-            key={index}
+            key={`${item.title}-${index}`}
             image={item.image}
             title={item.title}
             skills={item.skills}
