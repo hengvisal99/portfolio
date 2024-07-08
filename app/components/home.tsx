@@ -1,7 +1,6 @@
 "use client";
-import { Button, Image, Link } from "@nextui-org/react";
+import { Link } from "@nextui-org/react";
 import HomePhoto from "./HomePhoto";
-import FadeUp from "./animation/FadeUp";
 import Reveal from "./animation/Reveal";
 import Facebook from "./icons/Facebook";
 import Github from "./icons/Github";

@@ -37,7 +37,7 @@ function Portfolio() {
         { icon: "logos/material-ui.svg", tooltip: "Material UI" },
         { icon: "logos/react-query.svg", tooltip: "React Query" },
         { icon: "/logos/react-hook-form.png", tooltip: "React Hook Form" },
-        { icon: "/logos/next-auth.png", tooltip: "Next-auth" },
+        { icon: "/logos/next-auth.webp", tooltip: "Next-auth" },
         { icon: "logos/zod.svg", tooltip: "Zod" },
         { icon: "/logos/dexie.png", tooltip: "DexieJs" },
       ],

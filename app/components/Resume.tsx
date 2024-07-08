@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@nextui-org/react";
-import Image from "next/image";
+import { Link, Image } from "@nextui-org/react";
 import { IoIosArrowForward } from "react-icons/io";
 import { ButtonMovingBorder } from "../utils/moving-border";
 import SlideRight from "./animation/SlideRight";

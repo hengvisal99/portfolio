@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import { Link, Image } from "@nextui-org/react";
 import { Tooltip } from "@nextui-org/react";
 import Reveal from "./animation/Reveal";
 import ScaleCenter from "./animation/SlideInTop";
@@ -20,7 +20,7 @@ const Skills = () => {
     { icon: "logos/react-query.svg", tooltip: "React Query" },
     { icon: "/logos/react-hook-form.png", tooltip: "React Hook Form" },
     { icon: "logos/framer-motion.svg", tooltip: "Framer Motion" },
-    { icon: "/logos/next-auth.png", tooltip: "Next-auth" },
+    { icon: "/logos/next-auth.webp", tooltip: "Next-auth" },
     { icon: "logos/zod.svg", tooltip: "Zod" },
     { icon: "/logos/vuex.png", tooltip: "Vuex" },
     { icon: "/logos/vee.png", tooltip: "VeeValidate" },
