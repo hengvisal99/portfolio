@@ -27,6 +27,8 @@ const Home = () => {
       <div className="flex gap-5 flex-col my-auto order-2 lg:order-none place-items-center lg:place-items-start">
         <Reveal>
           <h1>Hello ,</h1>
+          <h1>  {new Date().toLocaleTimeString()}</h1>
+        
         </Reveal>
         <Reveal>
           <h1 className="text-accent">I'm Heng Visal</h1>
