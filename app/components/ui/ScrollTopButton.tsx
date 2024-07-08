@@ -5,8 +5,12 @@ import { useEffect, useState } from "react";
 const ScrollTopButton = () => {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
+    // const handleScroll = () => {
+    //   window.scrollY > 20 ? setVisible(true) : setVisible(false);
+    // };
     const handleScroll = () => {
-      window.scrollY > 20 ? setVisible(true) : setVisible(false);
+      console.log('scroll',window.scrollY)
+      setVisible(window.scrollY > 100); // Adjust the threshold value as needed
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll);
@@ -17,7 +21,7 @@ const ScrollTopButton = () => {
   }, []);
 
   const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "auto" });
   };
   return (
     visible && (

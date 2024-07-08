@@ -23,10 +23,12 @@ const About = () => {
             src="profile-2.webp"
           />
         </SlideRight>
-        <SlideLeft>
+
         <div className="flex flex-col gap-4 place-items-start justify-center">
-        
+          <SlideLeft>
             <h2 className="text-[28px]">2 Years Experience</h2>
+          </SlideLeft>
+          <SlideLeft>
             <p className="text-[#BFBECB]">
               As a front-end seveloper. I have successfully designed the user
               interface and worked closely with the backend team to integrate
@@ -35,7 +37,9 @@ const About = () => {
               enhanced front-end development.I have consistently maintained coding
               standards for code reviews, team support and managing multiple tasks
               assigned by project managers.
-            </p>
+            </p>            
+          </SlideLeft>
+          <SlideLeft>
             <Button
               color="success"
               className="text-lg font-semibold w-[145px] h-[50px]"
@@ -43,9 +47,11 @@ const About = () => {
               variant="bordered"
             >
               Resume
-            </Button>
+            </Button>           
+          </SlideLeft>
+
         </div>
-        </SlideLeft>
+
       </div>
     </div>
   );

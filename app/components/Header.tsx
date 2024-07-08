@@ -23,17 +23,18 @@ export default function Header() {
     { name: "Resume", color: "foreground", href: "#Resume" },
     { name: "Portfolio", color: "foreground", href: "#Portfolio" },
   ];
-  const handleMenuItemClick = (index : number) => {
+  const handleMenuItemClick = (index: number) => {
     setActiveIndex(index);
     setIsMenuOpen(false);
   };
   useEffect(() => {
     const hash = window.location.hash;
-    if (hash) {
-      const index = menuItems.findIndex(item => item.href === hash);
-      setActiveIndex(index !== -1 ? index : 0);
-      router.push(hash);
-    }
+    const index = menuItems.findIndex(item => item.href === hash);
+    setActiveIndex(index !== -1 ? index : 0);
+    // router.push(hash);
+    router.push(hash, {
+      scroll: false, // Do not scroll to the top of the page
+    });
   }, []);
   return (
     <Navbar
@@ -80,7 +81,7 @@ export default function Header() {
               onClick={() => setActiveIndex(index)}
             >
               {item.name}
-              
+
             </Link>
           </NavbarItem>
         ))}
