@@ -29,9 +29,11 @@ export default function Header() {
   };
   useEffect(() => {
     const hash = window.location.hash;
-    const index = menuItems.findIndex(item => item.href === hash);
-    setActiveIndex(index !== -1 ? index : 0);
-    router.push(hash)
+    if (hash) {
+      const index = menuItems.findIndex(item => item.href === hash);
+      setActiveIndex(index !== -1 ? index : 0);
+      router.push(hash);
+    }
   }, []);
   return (
     <Navbar
