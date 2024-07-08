@@ -18,7 +18,7 @@ interface Skill {
 
 const CustomCard = ({ image, title, skills }: CustomCardProps) => {
   return (
-    <Card className="group py-[8px] px-[8px] border border-gray-600 hover:border-accent">
+    <Card className="group py-[9px] px-[8px] border border-gray-600 hover:border-accent">
       <CardBody className="p-[6px] overflow-visible mr-2 max-h-[260px] cursor-pointer">
         <FadeInBottom>
           <Image

@@ -30,7 +30,7 @@ const Reveal = ({ children, width = "fit-content" }: props) => {
         {children}
       </motion.div> 
       
-      <motion.div
+      {/* <motion.div
         variants={{
           hidden: { left: 0 },
           visible: { left: "100%" },
@@ -40,7 +40,7 @@ const Reveal = ({ children, width = "fit-content" }: props) => {
         transition={{ duration: 0.5, ease: "easeIn" }}
          className="absolute top-1 bottom-1 left-0 right-0 bg-accent z-20"
       >
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

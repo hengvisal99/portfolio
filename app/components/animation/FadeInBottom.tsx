@@ -15,7 +15,7 @@ const FadeInBottom = ({ children, delay, width = "fit-content" }: Props) => {
   const slideControls = useAnimation();
 
   useEffect(() => {
-    console.log('isInView',isInView)
+    console.log('isInView', isInView)
     if (isInView) {
       mainControls.start("visible");
       slideControls.start("visible");
@@ -23,19 +23,18 @@ const FadeInBottom = ({ children, delay, width = "fit-content" }: Props) => {
   }, [isInView]);
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
-      <motion.div
-        variants={{
-          hidden: { y: 50, opacity: 0 },
-          visible: { y: 0, opacity: 1 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.7, delay:0.6, ease: "easeOut" }}
-      >
-        {children}
-      </motion.div>
-    </div>
+    <motion.div
+      ref={ref}
+      variants={{
+        hidden: { y: 50, opacity: 0 },
+        visible: { y: 0, opacity: 1 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+    >
+      {children}
+    </motion.div>
   );
 };
 

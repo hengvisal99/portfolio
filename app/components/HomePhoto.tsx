@@ -13,14 +13,6 @@ const HomePhoto = () => {
           transition: { delay: 0.5, duration: 0.4, ease: "easeIn" },
         }}
       >
-        {/* <Image
-                    className="rounded-bl-full rounded-br-full"
-                    src="/profile.webp"
-                    priority
-                    fill
-                    quality={100}
-                    alt=""
-                /> */}
         <Image
           className="rounded-bl-full rounded-br-full"
           src="/profile.webp"
