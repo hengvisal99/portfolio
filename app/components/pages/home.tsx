@@ -1,11 +1,11 @@
 "use client";
 import { Link } from "@nextui-org/react";
 import HomePhoto from "./HomePhoto";
-import FadeInBottom from "./animation/FadeInBottom";
-import Facebook from "./icons/Facebook";
-import Github from "./icons/Github";
-import LinkedIn from "./icons/LinkedIn";
-import Telegram from "./icons/Telegram";
+import FadeInBottom from "../animation/FadeInBottom";
+import Facebook from "../icons/Facebook";
+import Github from "../icons/Github";
+import LinkedIn from "../icons/LinkedIn";
+import Telegram from "../icons/Telegram";
 const Home = () => {
   const socials = [
     {

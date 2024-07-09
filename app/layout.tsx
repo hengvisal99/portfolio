@@ -4,8 +4,8 @@ import "./globals.css";
 import Providers from "./providers";
 import { ReactNode } from "react";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/pages/Header";
+import Footer from "./components/pages/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
 const jetbrainsMono = JetBrains_Mono({

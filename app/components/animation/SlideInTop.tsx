@@ -13,13 +13,10 @@ const SlideInTop = ({ children, delay, width = "fit-content" }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
-  const slideControls = useAnimation();
-
   useEffect(() => {
     console.log('isInView',isInView)
     if (isInView) {
       mainControls.start("visible");
-      slideControls.start("visible");
     }
   }, [isInView]);
 

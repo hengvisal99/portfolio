@@ -1,8 +1,8 @@
-import About from "./components/About";
-import Portfolio from "./components/Portfolio";
-import Resume from "./components/Resume";
-import Skills from "./components/Skills";
-import Home from "./components/home";
+import About from "./components/pages/About";
+import Portfolio from "./components/pages/Portfolio";
+import Resume from "./components/pages/Resume";
+import Skills from "./components/pages/Skills";
+import Home from "./components/pages/home";
 import ScrollTopButton from "./components/ui/ScrollTopButton";
 
 export default function Page() {

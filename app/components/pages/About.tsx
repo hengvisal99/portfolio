@@ -2,13 +2,13 @@
 import { Button } from "@nextui-org/react";
 import { IoIosArrowForward } from "react-icons/io";
 import { Image } from "@nextui-org/react";
-import Reveal from "./animation/Reveal";
-import SlideRight from "./animation/SlideRight";
-import SlideLeft from "./animation/SlideLeft";
+import Reveal from "../animation/Reveal";
+import SlideRight from "../animation/SlideRight";
+import SlideLeft from "../animation/SlideLeft";
 const About = () => {
   return (
     <div className="mb-16" id="About">
-      <div className="grid place-content-center mb-8">
+      <div className="grid place-content-center mb-4 lg:mb-8">
         <Reveal>
           <h2 className="text-accent mb-8">ABOUT ME</h2>
         </Reveal>

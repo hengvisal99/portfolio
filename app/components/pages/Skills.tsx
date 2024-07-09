@@ -1,9 +1,8 @@
 import React from "react";
-import { Link, Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import { Tooltip } from "@nextui-org/react";
-import Reveal from "./animation/Reveal";
-import ScaleCenter from "./animation/SlideInTop";
-import SlideInTop from "./animation/SlideInTop";
+import Reveal from "../animation/Reveal";
+import SlideInTop from "../animation/SlideInTop";
 
 const Skills = () => {
   const skills = [

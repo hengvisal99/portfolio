@@ -1,17 +1,29 @@
 "use client";
-import { Link, Image } from "@nextui-org/react";
-import { motion } from "framer-motion";
+import { Image } from "@nextui-org/react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 const HomePhoto = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const photoControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      photoControls.start("visible");
+    }
+  }, [isInView]);
   return (
     <motion.div className="relative flex justify-center w-full h-full">
       <motion.div
+        ref={ref}
         className="absolute order:1 lg:order-none w-[310px] h-[250px] sm:w-[340px] sm:h-[290px] lg:w-[490px] lg:h-[450px] 
                 flex items-center justify-center"
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 0.5, duration: 0.4, ease: "easeIn" },
+        initial="hidden"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
         }}
+        animate={photoControls}
+        transition = {{ delay: 0.5, duration: 0.4, ease: "easeIn" }}
       >
         <Image
           className="rounded-bl-full rounded-br-full"

@@ -1,6 +1,3 @@
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
 import type { Config } from "tailwindcss";
 const { nextui } = require("@nextui-org/react");
 const config: Config = {
@@ -35,12 +32,8 @@ const config: Config = {
       '2xl': '1536px', // 2X large screens and up
     },
   },
-  variants: {
-    fill: ['hover', 'focus'], // this line does the trick
-  },
   darkMode: "class",
   plugins: [
-    addVariablesForColors,
     nextui({
       themes: {
         dark: {
@@ -56,14 +49,4 @@ const config: Config = {
     }),
   ],
 };
-function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
- 
-  addBase({
-    ":root": newVars,
-  });
-}
 export default config;

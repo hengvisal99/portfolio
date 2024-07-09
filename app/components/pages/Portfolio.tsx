@@ -1,5 +1,5 @@
-import Reveal from "./animation/Reveal";
-import CustomCard from "./ui/CustomCard";
+import Reveal from "../animation/Reveal";
+import CustomCard from "../ui/CustomCard";
 
 function Portfolio() {
   const card = [
@@ -43,8 +43,8 @@ function Portfolio() {
       ],
     },
     {
-      // image: "/portfolio.webp",
-      image: "https://nextui.org/images/hero-card-complete.jpeg",
+      image: "/portfolio.webp",
+      // image: "https://nextui.org/images/hero-card-complete.jpeg",
       title: "Frontend Radio",
       icon: "12 Tracks",
       skills: [

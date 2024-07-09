@@ -9,8 +9,7 @@ const ScrollTopButton = () => {
     //   window.scrollY > 20 ? setVisible(true) : setVisible(false);
     // };
     const handleScroll = () => {
-      console.log('scroll',window.scrollY)
-      setVisible(window.scrollY > 100); // Adjust the threshold value as needed
+      setVisible(window.scrollY > 100);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll);

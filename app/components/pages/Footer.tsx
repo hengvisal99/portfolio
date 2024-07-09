@@ -1,9 +1,9 @@
 import { Link, Image } from "@nextui-org/react";
 import React from "react";
-import Facebook from "./icons/Facebook";
-import Github from "./icons/Github";
-import LinkedIn from "./icons/LinkedIn";
-import Telegram from "./icons/Telegram";
+import Facebook from "../icons/Facebook";
+import Github from "../icons/Github";
+import LinkedIn from "../icons/LinkedIn";
+import Telegram from "../icons/Telegram";
 
 const Footer = () => {
   const socials = [

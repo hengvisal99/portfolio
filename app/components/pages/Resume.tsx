@@ -1,10 +1,7 @@
 "use client";
-import { Button } from "@nextui-org/react";
-import { Link, Image } from "@nextui-org/react";
-import { IoIosArrowForward } from "react-icons/io";
-import { ButtonMovingBorder } from "../utils/moving-border";
-import Reveal from "./animation/Reveal";
-import SlideLeft from "./animation/SlideLeft";
+import { Image } from "@nextui-org/react";
+import Reveal from "../animation/Reveal";
+import SlideLeft from "../animation/SlideLeft";
 
 const Resume = () => {
   const education = [
