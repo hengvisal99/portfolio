@@ -13,7 +13,9 @@ export default function Page() {
       <Skills />
       <Resume />
       <Portfolio />
-      <ScrollTopButton />
+      <div className="overflow-x-hidden">
+        <ScrollTopButton />
+      </div>
     </div>
   );
 }
