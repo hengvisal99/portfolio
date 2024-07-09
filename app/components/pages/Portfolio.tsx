@@ -64,13 +64,13 @@ function Portfolio() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
         {card.map((item, index) => (
-          <Link  key={`${item.title}-${index}`} href={item.link} target="_blank">
             <CustomCard
+              key={`${item.title}-${index}`}
               image={item.image}
               title={item.title}
               skills={item.skills}
+              link = {item.link}
             />
-          </Link>
         ))}
       </div>
     </div>

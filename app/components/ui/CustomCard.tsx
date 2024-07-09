@@ -1,5 +1,5 @@
 "use client";
-import { Card, CardBody, Image, CardFooter, Link } from "@nextui-org/react";
+import { Card, CardBody, Image, CardFooter, Link, Button } from "@nextui-org/react";
 import { Tooltip } from "@nextui-org/react";
 import { GoArrowUpRight } from "react-icons/go";
 import FadeInBottom from "../animation/FadeInBottom";
@@ -8,6 +8,7 @@ interface CustomCardProps {
   image: string;
   title: string;
   skills: Skill[];
+  link: string
 }
 
 interface Skill {
@@ -15,10 +16,10 @@ interface Skill {
   tooltip: string;
 }
 
-const CustomCard = ({ image, title , skills }: CustomCardProps) => {
+const CustomCard = ({ image, title, skills, link }: CustomCardProps) => {
   return (
-    <Card className="group py-[9px] px-[8px] border border-gray-600 hover:border-accent h-full w-full" isPressable>
-      <CardBody className="p-[6px] overflow-visible mr-2 max-h-[260px] cursor-pointer">
+    <Card className="group py-[9px] px-[8px] border border-gray-600 cursor-auto hover:border-accent hover:ease-in h-full w-full" isPressable>
+      <CardBody className="p-[6px] overflow-visible mr-2 max-h-[260px]">
         <FadeInBottom>
           <Image
             isZoomed
@@ -36,14 +37,16 @@ const CustomCard = ({ image, title , skills }: CustomCardProps) => {
             <h4 className="font-bold text-large text-accent">{title}</h4>
           </Reveal>
           <Reveal>
-            <GoArrowUpRight className="size-[25px] cursor-pointer duration-300 transition group-hover:scale-150" />
+            <Link isExternal href={link} className="border-2 rounded-xl size-10 border-[#3f3f46] group-hover:border-accent hover:bg-[#3f3f46] cursor-pointer">
+              <GoArrowUpRight className="size-[25px]  text-white mx-auto" />
+            </Link>
           </Reveal>
         </div>
         <div className="grid mb-1 gap-x-2 gap-y-3 grid-cols-5 lg:grid-cols-5 w-full">
           {skills.map((skill, index) => (
-            <Reveal   key={index}>
+            <Reveal key={index}>
               <Tooltip
-                content={skill.tooltip} 
+                content={skill.tooltip}
                 color="danger"
               >
                 <div className="flex justify-center items-center">
@@ -59,7 +62,7 @@ const CustomCard = ({ image, title , skills }: CustomCardProps) => {
           ))}
         </div>
       </CardFooter>
-    </Card>
+    </Card >
   );
 };
 
