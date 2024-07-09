@@ -8,7 +8,7 @@ import SlideLeft from "./animation/SlideLeft";
 const About = () => {
   return (
     <div className="mb-16" id="About">
-      <div className="grid place-content-center mb-6 lg:mb-8">
+      <div className="grid place-content-center mb-8">
         <Reveal>
           <h2 className="text-accent mb-8">ABOUT ME</h2>
         </Reveal>
