@@ -20,18 +20,19 @@ const SlideInTop = ({ children, delay, width = "fit-content" }: Props) => {
   }, [isInView]);
 
   return (
-    <motion.div
-      ref={ref}
-      variants={{
-        hidden: { y: -1000, opacity: 0 },
-        visible: { y: 0, opacity: 1 },
-      }}
-      initial="hidden"
-      animate={mainControls}
-      transition={{ duration: 1, delay, ease: "easeOut" }}
-    >
-      {children}
-    </motion.div>
+    <div ref={ref}>
+      <motion.div
+        variants={{
+          hidden: { y: -1000, opacity: 0 },
+          visible: { y: 0, opacity: 1 },
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 1, delay, ease: "easeOut" }}
+      >
+        {children}
+      </motion.div>
+    </div>
   );
 };
 

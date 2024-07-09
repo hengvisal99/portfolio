@@ -4,7 +4,6 @@ import { Tooltip } from "@nextui-org/react";
 import Reveal from "../animation/Reveal";
 import SlideInTop from "../animation/SlideInTop";
 
-
 const Skills = () => {
   const skills = [
     { icon: "logos/angular.svg", tooltip: "Angular" },
@@ -38,12 +37,11 @@ const Skills = () => {
       </div>
       <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-10 lg:grid-cols-10 gap-x-4 lg:gap-x-4 gap-y-4 lg:gap-y-6">
         {skills.map((skill, index) => (
-         
-         <div
+          <div
             key={index}
             className="flex justify-center items-center border-2 border-[#ffffff1a] rounded-xl lg:rounded-2xl overflow-hidden p-2"
           >
-             <SlideInTop delay={index * 0.03}>
+            <SlideInTop delay={index * 0.03}>
               <Tooltip content={skill.tooltip} color="danger" offset={15}>
                 <div className="flex justify-center items-center ">
                   <Image
@@ -54,12 +52,10 @@ const Skills = () => {
                   />
                 </div>
               </Tooltip>
-             </SlideInTop >
+            </SlideInTop>
           </div>
-
         ))}
       </div>
-
     </div>
   );
 };
