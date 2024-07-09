@@ -32,7 +32,7 @@ const SlideInTop = ({ children, delay, width = "fit-content" }: Props) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.9, delay, ease: "easeOut" }}
+        transition={{ duration: 1, delay, ease: "easeOut" }}
       >
         {children}
       </motion.div>

@@ -8,22 +8,21 @@ import SlideLeft from "./animation/SlideLeft";
 const About = () => {
   return (
     <div className="mb-16" id="About">
-      <div className="grid place-content-center  mb-8">
+      <div className="grid place-content-center mb-6 lg:mb-8">
         <Reveal>
           <h2 className="text-accent mb-8">ABOUT ME</h2>
         </Reveal>
       </div>
       <div className="grid grid-col-1 lg:grid-cols-2 gap-x-10">
-        <Image
-          className="hidden lg:grid place-content-center h-[460px]"
-          isZoomed
-          width="100%"
-          alt=""
-          src="profile-2.webp"
-        />
-        {/* <SlideRight>
-        
-        </SlideRight> */}
+        <SlideRight>
+          <Image
+            className="hidden lg:grid place-content-center h-[460px]"
+            isZoomed
+            width="100%"
+            alt=""
+            src="profile-2.webp"
+          />
+        </SlideRight>
 
         <div className="flex flex-col gap-4 place-items-start justify-center">
           <SlideLeft>
