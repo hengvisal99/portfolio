@@ -37,7 +37,7 @@ export default function RootLayout({
         </NextUIProvider> */}
         <Providers>
           <Header />
-          <main>{children}</main>
+          <main  className="overflow-x-hidden">{children}</main>
           <Footer />
           <SpeedInsights />
         </Providers>
