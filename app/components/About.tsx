@@ -14,15 +14,16 @@ const About = () => {
         </Reveal>
       </div>
       <div className="grid grid-col-1 lg:grid-cols-2 gap-x-10">
-        <SlideRight>
-          <Image
-            className="hidden lg:grid place-content-center max-h-[401px]"
-            isZoomed
-            width="100%"
-            alt=""
-            src="profile-2.webp"
-          />
-        </SlideRight>
+        <Image
+          className="hidden lg:grid place-content-center h-[460px]"
+          isZoomed
+          width="100%"
+          alt=""
+          src="profile-2.webp"
+        />
+        {/* <SlideRight>
+        
+        </SlideRight> */}
 
         <div className="flex flex-col gap-4 place-items-start justify-center">
           <SlideLeft>
@@ -34,10 +35,10 @@ const About = () => {
               interface and worked closely with the backend team to integrate
               Apis.My role has involved resolving technical issues, optimizing
               application performance and exploring new technologies to ensure
-              enhanced front-end development.I have consistently maintained coding
-              standards for code reviews, team support and managing multiple tasks
-              assigned by project managers.
-            </p>            
+              enhanced front-end development.I have consistently maintained
+              coding standards for code reviews, team support and managing
+              multiple tasks assigned by project managers.
+            </p>
           </SlideLeft>
           <SlideLeft>
             <Button
@@ -47,11 +48,9 @@ const About = () => {
               variant="bordered"
             >
               Resume
-            </Button>           
+            </Button>
           </SlideLeft>
-
         </div>
-
       </div>
     </div>
   );

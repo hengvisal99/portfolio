@@ -29,7 +29,7 @@ const ScrollTopButton = () => {
         onClick={handleClick}
         isIconOnly
         color="success"
-        className="fixed bottom-5 right-5 z-50 overflow-x-hidden"
+        className="fixed bottom-5 right-5 z-50"
       >
         <FaArrowUp />
       </Button>
