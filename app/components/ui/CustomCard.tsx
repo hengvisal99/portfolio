@@ -1,10 +1,9 @@
 "use client";
-import { Card, CardBody, Image, CardFooter } from "@nextui-org/react";
+import { Card, CardBody, Image, CardFooter, Link } from "@nextui-org/react";
 import { Tooltip } from "@nextui-org/react";
 import { GoArrowUpRight } from "react-icons/go";
 import FadeInBottom from "../animation/FadeInBottom";
 import Reveal from "../animation/Reveal";
-
 interface CustomCardProps {
   image: string;
   title: string;
@@ -16,9 +15,9 @@ interface Skill {
   tooltip: string;
 }
 
-const CustomCard = ({ image, title, skills }: CustomCardProps) => {
+const CustomCard = ({ image, title , skills }: CustomCardProps) => {
   return (
-    <Card className="group py-[9px] px-[8px] border border-gray-600 hover:border-accent">
+    <Card className="group py-[9px] px-[8px] border border-gray-600 hover:border-accent h-full w-full" isPressable>
       <CardBody className="p-[6px] overflow-visible mr-2 max-h-[260px] cursor-pointer">
         <FadeInBottom>
           <Image

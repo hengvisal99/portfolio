@@ -4,6 +4,7 @@ import { Tooltip } from "@nextui-org/react";
 import Reveal from "../animation/Reveal";
 import SlideInTop from "../animation/SlideInTop";
 
+
 const Skills = () => {
   const skills = [
     { icon: "logos/angular.svg", tooltip: "Angular" },

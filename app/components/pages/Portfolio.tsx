@@ -1,12 +1,13 @@
+import Link from "next/link";
 import Reveal from "../animation/Reveal";
 import CustomCard from "../ui/CustomCard";
 
 function Portfolio() {
   const card = [
     {
-      // image: "/mef.webp",
-      image: "https://nextui.org/images/hero-card-complete.jpeg",
-      title: "Frontend Radio",
+      image: "/mef.png",
+      title: "Mef Real Estate",
+      link: "https://nbfsa.registrationservices.gov.kh",
       skills: [
         { icon: "logos/angular.svg", tooltip: "Angular" },
         { icon: "logos/bootstrap.svg", tooltip: "Bootstrap" },
@@ -14,10 +15,9 @@ function Portfolio() {
       ],
     },
     {
-      // image: "/moc.webp",
-      image: "https://nextui.org/images/hero-card-complete.jpeg",
-      title: "Frontend Radio",
-      icon: "12 Tracks",
+      image: "/moc.png",
+      title: "Moc Ecommerce",
+      link: "https://ec-user.moc.gov.kh",
       skills: [
         { icon: "logos/angular.svg", tooltip: "Angular" },
         { icon: "logos/bootstrap.svg", tooltip: "Bootstrap" },
@@ -26,10 +26,9 @@ function Portfolio() {
       ],
     },
     {
-      // image: "/portal.webp",
-      image: "https://nextui.org/images/hero-card-complete.jpeg",
-      title: "Frontend Radio",
-      icon: "12 Tracks",
+      image: "/portal.png",
+      link: "https://sp-portal-stg.intechdevkh.com",
+      title: "Social Protection",
       skills: [
         { icon: "logos/react.svg", tooltip: "React" },
         { icon: "/logos/nextjs.svg", tooltip: "NextJs" },
@@ -44,9 +43,8 @@ function Portfolio() {
     },
     {
       image: "/portfolio.webp",
-      // image: "https://nextui.org/images/hero-card-complete.jpeg",
-      title: "Frontend Radio",
-      icon: "12 Tracks",
+      title: "VisalFolio",
+      link: "https://hengvisal.vercel.app",
       skills: [
         { icon: "logos/react.svg", tooltip: "React" },
         { icon: "/logos/nextjs.svg", tooltip: "NextJs" },
@@ -66,12 +64,14 @@ function Portfolio() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
         {card.map((item, index) => (
-          <CustomCard
-            key={`${item.title}-${index}`}
-            image={item.image}
-            title={item.title}
-            skills={item.skills}
-          />
+          <Link href={item.link} target="_blank">
+            <CustomCard
+              key={`${item.title}-${index}`}
+              image={item.image}
+              title={item.title}
+              skills={item.skills}
+            />
+          </Link>
         ))}
       </div>
     </div>
