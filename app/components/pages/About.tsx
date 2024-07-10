@@ -43,7 +43,7 @@ const About = () => {
           <SlideLeft>
             <Link
               isExternal
-              href="https://drive.google.com/file/d/1qyrMNJI1rhBlOvlpQ-4fdH4ZpkR0YmGI/view?usp=sharing"
+              href="https://drive.google.com/file/d/1PgMD5yDrRe4sAIFlFnlgTbg_2GOdicq4/view"
               className="w-[145px] h-[50px] px-4 border-2 rounded-xl size-10 border-accent group-hover:border-accent cursor-pointer"
             > 
               <p className="text-accent text-lg font-semibold">View CV</p>
