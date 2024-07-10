@@ -1,10 +1,11 @@
 "use client";
-import { Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 import { IoIosArrowForward } from "react-icons/io";
 import { Image } from "@nextui-org/react";
 import Reveal from "../animation/Reveal";
 import SlideRight from "../animation/SlideRight";
 import SlideLeft from "../animation/SlideLeft";
+import { GoArrowUpRight } from "react-icons/go";
 const About = () => {
   return (
     <div className="mb-16" id="About">
@@ -40,14 +41,14 @@ const About = () => {
             </p>
           </SlideLeft>
           <SlideLeft>
-            <Button
-              color="success"
-              className="text-lg font-semibold w-[145px] h-[50px]"
-              endContent={<IoIosArrowForward />}
-              variant="bordered"
-            >
-              Resume
-            </Button>
+            <Link
+              isExternal
+              href="https://drive.google.com/file/d/14TPQLG-1DsGSNl1zXCVKoZTQHRbtPJ7X/view"
+              className="w-[145px] h-[50px] px-4 border-2 rounded-xl size-10 border-accent group-hover:border-accent cursor-pointer"
+            > 
+              <p className="text-accent text-lg font-semibold">View CV</p>
+              <IoIosArrowForward className="size-[20px]  text-accent mx-auto" />
+            </Link>
           </SlideLeft>
         </div>
       </div>

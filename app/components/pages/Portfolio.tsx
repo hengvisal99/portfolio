@@ -16,8 +16,19 @@ function Portfolio() {
     },
     {
       image: "/moc.png",
-      title: "Moc Ecommerce",
+      title: "Moc User Ecommerce",
       link: "https://ec-user.moc.gov.kh",
+      skills: [
+        { icon: "logos/angular.svg", tooltip: "Angular" },
+        { icon: "logos/bootstrap.svg", tooltip: "Bootstrap" },
+        { icon: "logos/angular-material.svg", tooltip: "Angular Material" },
+        { icon: "logos/rxjs.svg", tooltip: "RxJs" },
+      ],
+    },
+    {
+      image: "/moc-2.png",
+      title: "Moc Admin",
+      link: "https://ec-admin.moc.gov.kh",
       skills: [
         { icon: "logos/angular.svg", tooltip: "Angular" },
         { icon: "logos/bootstrap.svg", tooltip: "Bootstrap" },
@@ -40,19 +51,7 @@ function Portfolio() {
         { icon: "logos/zod.svg", tooltip: "Zod" },
         { icon: "/logos/dexie.png", tooltip: "DexieJs" },
       ],
-    },
-    {
-      image: "/portfolio.webp",
-      title: "VisalFolio",
-      link: "https://hengvisal.vercel.app",
-      skills: [
-        { icon: "logos/react.svg", tooltip: "React" },
-        { icon: "/logos/nextjs.svg", tooltip: "NextJs" },
-        { icon: "logos/tailwind.svg", tooltip: "Tailwind" },
-        { icon: "/logos/next-ui.png", tooltip: "Next UI" },
-        { icon: "logos/framer-motion.svg", tooltip: "Framer Motion" },
-      ],
-    },
+    }
   ];
   return (
     <div id="Portfolio">

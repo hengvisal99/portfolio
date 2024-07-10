@@ -43,7 +43,7 @@ const Resume = () => {
     {
       date: "Dec/2021 - Feb/2022",
       position: "Frontend Developer",
-      companyName: "Haha",
+      companyName: "Navita",
       job: `Create UI, ensure that all user input is validated before submitting to the back-end.`,
     },
   ];
