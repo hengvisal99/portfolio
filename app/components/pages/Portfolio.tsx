@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Reveal from "../animation/Reveal";
 import CustomCard from "../ui/CustomCard";
 

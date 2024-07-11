@@ -1,11 +1,10 @@
 "use client";
-import { Button, Link } from "@nextui-org/react";
+import { Link } from "@nextui-org/react";
 import { IoIosArrowForward } from "react-icons/io";
 import { Image } from "@nextui-org/react";
 import Reveal from "../animation/Reveal";
 import SlideRight from "../animation/SlideRight";
 import SlideLeft from "../animation/SlideLeft";
-import { GoArrowUpRight } from "react-icons/go";
 const About = () => {
   return (
     <div className="mb-16" id="About">

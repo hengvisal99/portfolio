@@ -3,11 +3,9 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
 import { ReactNode } from "react";
-
 import Header from "./components/pages/Header";
 import Footer from "./components/pages/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Head from "next/head";
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -26,15 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head> */}
       <body className={`${jetbrainsMono.variable} overflow-x-hidden`}>
-        {/* <NextUIProvider className="dark">
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </NextUIProvider> */}
         <Providers>
           <Header />
           <main  className="overflow-x-hidden">{children}</main>

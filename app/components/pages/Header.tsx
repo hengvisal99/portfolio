@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import { Logo } from "../icons/Logo";
 import { useRouter } from "next/navigation";
 export default function Header() {
-  const router = useRouter()
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const menuItems = [
@@ -29,9 +29,8 @@ export default function Header() {
   };
   useEffect(() => {
     const hash = window.location.hash;
-    const index = menuItems.findIndex(item => item.href === hash);
+    const index = menuItems.findIndex((item) => item.href === hash);
     setActiveIndex(index !== -1 ? index : 0);
-    // router.push(hash);
     router.push(hash, {
       scroll: false, // Do not scroll to the top of the page
     });
@@ -57,7 +56,6 @@ export default function Header() {
           "data-[active=true]:after:bg-accent",
         ],
       }}
-
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
@@ -66,9 +64,12 @@ export default function Header() {
           aria-label={isMenuOpen ? "Open menu" : "Close menu"}
           className="md:hidden"
         />
+
         <NavbarBrand>
-          <Logo></Logo>
-          <p className="font-bold text-inherit text-3xl">VISALFOLIO</p>
+          <Link href="#" className="cursor-pointer text-white" onClick={() => handleMenuItemClick(0)}>
+            <Logo></Logo>
+            <p className="font-bold text-inherit text-3xl">VISALFOLIO</p>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -81,7 +82,6 @@ export default function Header() {
               onClick={() => setActiveIndex(index)}
             >
               {item.name}
-
             </Link>
           </NavbarItem>
         ))}
