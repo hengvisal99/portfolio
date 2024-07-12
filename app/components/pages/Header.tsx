@@ -37,8 +37,10 @@ export default function Header() {
   }, []);
   return (
     <Navbar
+      isBordered
+      // isBlurred={true}
       classNames={{
-        base: "bg-transparent",
+        base: "bg-dark",
         wrapper: "max-w-[1300px]",
         item: [
           "flex",
@@ -66,7 +68,11 @@ export default function Header() {
         />
 
         <NavbarBrand>
-          <Link href="#" className="cursor-pointer text-white" onClick={() => handleMenuItemClick(0)}>
+          <Link
+            href="#"
+            className="cursor-pointer text-white"
+            onClick={() => handleMenuItemClick(0)}
+          >
             <Logo></Logo>
             <p className="font-bold text-inherit text-3xl">VISALFOLIO</p>
           </Link>
