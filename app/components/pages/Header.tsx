@@ -73,7 +73,7 @@ export default function Header() {
             className="cursor-pointer text-white"
             onClick={() => handleMenuItemClick(0)}
           >
-            <Logo></Logo>
+            {/* <Logo></Logo> */}
             <p className="font-bold text-inherit text-3xl">VISALFOLIO</p>
           </Link>
         </NavbarBrand>

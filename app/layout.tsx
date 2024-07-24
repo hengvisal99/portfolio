@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 import Header from "./components/pages/Header";
 import Footer from "./components/pages/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react"
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -30,6 +31,7 @@ export default function RootLayout({
           <main  className="overflow-x-hidden">{children}</main>
           <Footer />
           <SpeedInsights />
+          <Analytics/>
         </Providers>
       </body>
     </html>
